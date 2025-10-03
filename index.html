@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXOTIC MOTORS | Luxury & Performance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#a855f7',
+                        dark: '#0e0e0e',
+                        'dark-light': '#1a1a1a',
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 6s linear infinite',
+                        'glass': 'glass 4s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        glass: {
+                            '0%, 100%': { 'backdrop-filter': 'blur(8px)' },
+                            '50%': { 'backdrop-filter': 'blur(12px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-40 bg-dark bg-opacity-80 backdrop-filter backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-primary font-bold text-2xl">EXOTIC</span>
+                    <span class="text-white font-light text-2xl">MOTORS</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="#" class="text-white hover:text-primary transition-colors duration-300">Home</a>
+                        <a href="#featured" class="text-white hover:text-primary transition-colors duration-300">Inventory</a>
+                        <a href="#services" class="text-white hover:text-primary transition-colors duration-300">Services</a>
+                        <a href="#testimonials" class="text-white hover:text-primary transition-colors duration-300">Testimonials</a>
+                        <a href="#contact" class="text-white hover:text-primary transition-colors duration-300">Contact</a>
+                        <button class="bg-primary hover:bg-purple-700 text-white px-6 py-2 rounded-full transition-all duration-300 transform hover:scale-105">
+                            Sell My Car
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-light pb-4 px-4">
+            <div class="pt-2 pb-3 space-y-1">
+                <a href="#" class="block text-white hover:text-primary px-3 py-2 rounded-md">Home</a>
+                <a href="#featured" class="block text-white hover:text-primary px-3 py-2 rounded-md">Inventory</a>
+                <a href="#services" class="block text-white hover:text-primary px-3 py-2 rounded-md">Services</a>
+                <a href="#testimonials" class="block text-white hover:text-primary px-3 py-2 rounded-md">Testimonials</a>
+                <a href="#contact" class="block text-white hover:text-primary px-3 py-2 rounded-md">Contact</a>
+            </div>
+            <button class="w-full bg-primary hover:bg-purple-700 text-white px-4 py-2 rounded-full transition-colors duration-300">
+                Sell My Car
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image with Gradient Overlay -->
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center"></div>
+        <div class="absolute inset-0 hero-gradient"></div>
+        
+        <!-- Content -->
+        <div class="relative z-10 px-4 text-center max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 glow">
+                <span class="block">DRIVE THE <span class="text-primary">DREAM</span></span>
+                <span class="block">OWN THE <span class="text-primary">LEGEND</span></span>
+            </h1>
+            <p class="text-xl mb-10 text-gray-300 max-w-2xl mx-auto">
+                Exclusive collection of the world's most coveted luxury and performance vehicles.
+                Only the rarest finds for the most discerning collectors.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-primary hover:bg-purple-700 text-white px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 transform hover:scale-105">
+                    Explore Collection
+                </button>
+                <button class="bg-transparent border-2 border-white hover:border-primary text-white hover:text-primary px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 transform hover:scale-105">
+                    Sell Your Car
+                </button>
+            </div>
+        </div>
+        
+        <!-- Hero Car Image -->
+        <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-5xl px-4">
+            <img src="https://www.freepnglogos.com/uploads/lamborghini-png/lamborghini-aventador-sv-transparent-png-stickpng-0.png" 
+                 alt="Luxury Car" 
+                 class="w-full max-w-3xl mx-auto float-animate">
+        </div>
+        
+        <!-- Scroll Down Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+            <a href="#featured" class="animate-bounce">
+                <div class="w-8 h-8 border-2 border-white rounded-full flex items-center justify-center">
+                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Featured Cars Section -->
+    <section id="featured" class="py-24 px-4 bg-dark-light section-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 glow">CURATED <span class="text-primary">COLLECTION</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Discover automotive excellence with our hand-picked selection of the world's most prestigious vehicles.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Car 1 -->
+                <div class="car-card bg-dark rounded-xl overflow-hidden transition-all duration-300 highlight-animate hover:highlight-animate">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                             alt="Lamborghini Aventador" 
+                             class="w-full h-full object-cover car-image transition-transform duration-500">
+                        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
+                            <span class="text-primary font-semibold">NEW ARRIVAL</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-bold">Lamborghini Aventador SVJ</h3>
+                                <p class="text-gray-400">2023 • 1,200 mi</p>
+                            </div>
+                            <span class="text-primary font-bold text-xl">$580,000</span>
+                        </div>
+                        <div class="mt-4 flex items-center">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-400 ml-2">4.8</span>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-800">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-gray-400"><i class="fas fa-tachometer-alt mr-2"></i> 2,200 hp</span>
+                                <span class="text-gray-400"><i class="fas fa-gas-pump mr-2"></i> 11 mpg</span>
+                                <span class="text-gray-400"><i class="fas fa-bolt mr-2"></i> Hybrid</span>
+                            </div>
+                        </div>
+                        <button class="w-full mt-6 bg-primary hover:bg-purple-700 text-white py-3 rounded-full transition-colors duration-300">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Car 2 -->
+                <div class="car-card bg-dark rounded-xl overflow-hidden transition-all duration-300 highlight-animate hover:highlight-animate">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1616788494669-dee0d7253257?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1176&q=80" 
+                             alt="Rolls-Royce Phantom" 
+                             class="w-full h-full object-cover car-image transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-bold">Rolls-Royce Phantom VIII</h3>
+                                <p class="text-gray-400">2022 • 800 mi</p>
+                            </div>
+                            <span class="text-primary font-bold text-xl">$455,000</span>
+                        </div>
+                        <div class="mt-4 flex items-center">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-400 ml-2">5.0</span>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-800">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-gray-400"><i class="fas fa-tachometer-alt mr-2"></i> 563 hp</span>
+                                <span class="text-gray-400"><i class="fas fa-gas-pump mr-2"></i> 18 mpg</span>
+                                <span class="text-gray-400"><i class="fas fa-cog mr-2"></i> Automatic</span>
+                            </div>
+                        </div>
+                        <button class="w-full mt-6 bg-primary hover:bg-purple-700 text-white py-3 rounded-full transition-colors duration-300">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Car 3 -->
+                <div class="car-card bg-dark rounded-xl overflow-hidden transition-all duration-300 highlight-animate hover:highlight-animate">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                             alt="Ferrari 488 GTB" 
+                             class="w-full h-full object-cover car-image transition-transform duration-500">
+                        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
+                            <span class="text-primary font-semibold">LIMITED EDITION</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-bold">Ferrari 488 Pista</h3>
+                                <p class="text-gray-400">2021 • 1,500 mi</p>
+                            </div>
+                            <span class="text-primary font-bold text-xl">$399,000</span>
+                        </div>
+                        <div class="mt-4 flex items-center">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-400 ml-2">5.0</span>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-800">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-gray-400"><i class="fas fa-tachometer-alt mr-2"></i> 710 hp</span>
+                                <span class="text-gray-400"><i class="fas fa-gas-pump mr-2"></i> 15 mpg</span>
+                                <span class="text-gray-400"><i class="fas fa-cog mr-2"></i> Automatic</span>
+                            </div>
+                        </div>
+                        <button class="w-full mt-6 bg-primary hover:bg-purple-700 text-white py-3 rounded-full transition-colors duration-300">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Car 4 -->
+                <div class="car-card bg-dark rounded-xl overflow-hidden transition-all duration-300 highlight-animate hover:highlight-animate">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1605540436563-5bca919ae766?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1139&q=80" 
+                             alt="Bugatti Chiron" 
+                             class="w-full h-full object-cover car-image transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-bold">Bugatti Chiron Super Sport</h3>
+                                <p class="text-gray-400">2023 • 300 mi</p>
+                            </div>
+                            <span class="text-primary font-bold text-xl">$3.2M</span>
+                        </div>
+                        <div class="mt-4 flex items-center">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-400 ml-2">5.0</span>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-800">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-gray-400"><i class="fas fa-tachometer-alt mr-2"></i> 1,600 hp</span>
+                                <span class="text-gray-400"><i class="fas fa-gas-pump mr-2"></i> 9 mpg</span>
+                                <span class="text-gray-400"><i class="fas fa-bolt mr-2"></i> Hybrid</span>
+                            </div>
+                        </div>
+                        <button class="w-full mt-6 bg-primary hover:bg-purple-700 text-white py-3 rounded-full transition-colors duration-300">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Car 5 -->
+                <div class="car-card bg-dark rounded-xl overflow-hidden transition-all duration-300 highlight-animate hover:highlight-animate">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1555626906-fcf10d6851b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                             alt="Porsche 911 Turbo S" 
+                             class="w-full h-full object-cover car-image transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-bold">Porsche 911 Turbo S</h3>
+                                <p class="text-gray-400">2023 • 1,000 mi</p>
+                            </div>
+                            <span class="text-primary font-bold text-xl">$235,000</span>
+                        </div>
+                        <div class="mt-4 flex items-center">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-400 ml-2">4.7</span>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-800">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-gray-400"><i class="fas fa-tachometer-alt mr-2"></i> 640 hp</span>
+                                <span class="text-gray-400"><i class="fas fa-gas-pump mr-2"></i> 20 mpg</span>
+                                <span class="text-gray-400"><i class="fas fa-cog mr-2"></i> Automatic</span>
+                            </div>
+                        </div>
+                        <button class="w-full mt-6 bg-primary hover:bg-purple-700 text-white py-3 rounded-full transition-colors duration-300">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Car 6 -->
+                <div class="car-card bg-dark rounded-xl overflow-hidden transition-all duration-300 highlight-animate hover:highlight-animate">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1555353540-64580b51c258?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1246&q=80" 
+                             alt="Aston Martin DBS Superleggera" 
+                             class="w-full h-full object-cover car-image transition-transform duration-500">
+                        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
+                            <span class="text-primary font-semibold">ONLY 250 MADE</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-bold">Aston Martin DBS Superleggera</h3>
+                                <p class="text-gray-400">2022 • 2,500 mi</p>
+                            </div>
+                            <span class="text-primary font-bold text-xl">$330,000</span>
+                        </div>
+                        <div class="mt-4 flex items-center">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-400 ml-2">5.0</span>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-800">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-gray-400"><i class="fas fa-tachometer-alt mr-2"></i> 715 hp</span>
+                                <span class="text-gray-400"><i class="fas fa-gas-pump mr-2"></i> 17 mpg</span>
+                                <span class="text-gray-400"><i class="fas fa-cog mr-2"></i> Automatic</span>
+                            </div>
+                        </div>
+                        <button class="w-full mt-6 bg-primary hover:bg-purple-700 text-white py-3 rounded-full transition-colors duration-300">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="border border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-full transition-all duration-300">
+                    View Full Inventory
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="services" class="py-24 px-4 bg-dark section-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 glow">WHY <span class="text-primary">CHOOSE US</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Our exclusive services and attention to detail set us apart in the luxury automotive market.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-dark-light p-8 rounded-xl border border-gray-800 hover:border-primary transition-all duration-300 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-primary bg-opacity-20 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-check text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Exclusive Selection</h3>
+                    <p class="text-gray-400">
+                        Hand-picked collection of the rarest, most desirable luxury and performance vehicles.
+                    </p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-dark-light p-8 rounded-xl border border-gray-800 hover:border-primary transition-all duration-300 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-primary bg-opacity-20 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-search-dollar text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Premium Valuation</h3>
+                    <p class="text-gray-400">
+                        Accurate, competitive pricing with complimentary expert valuation for your vehicle.
+                    </p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-dark-light p-8 rounded-xl border border-gray-800 hover:border-primary transition-all duration-300 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-primary bg-opacity-20 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Total Protection</h3>
+                    <p class="text-gray-400">
+                        Comprehensive vehicle checks, warranties and insurance products tailored for luxury cars.
+                    </p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-dark-light p-8 rounded-xl border border-gray-800 hover:border-primary transition-all duration-300 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-primary bg-opacity-20 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-globe text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Global Network</h3>
+                    <p class="text-gray-400">
+                        Access to our international network of high-net-worth collectors and investors.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 px-4 bg-dark-light section-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 glow">OUR <span class="text-primary">CLIENTS</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    What our exclusive clients say about the EXOTIC MOTORS experience.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-dark p-8 rounded-xl border border-gray-800">
+                    <div class="flex items-center mb-6">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" 
+                             alt="Client" 
+                             class="w-14 h-14 rounded-full border-2 border-primary object-cover">
+                        <div class="ml-4">
+                            <h4 class="font-bold">Ahmed Al Maktoum</h4>
+                            <p class="text-gray-400 text-sm">Dubai, UAE</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 mb-6">
+                        "Working with EXOTIC MOTORS was a seamless experience. Their team understood exactly what I was looking for and secured a flawless 2022 Ferrari SF90 within days. The level of service is unmatched."
+                    </p>
+                    <div class="text-primary">
+                        <i class="fas fa-quote-right text-3xl opacity-20"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-dark p-8 rounded-xl border border-gray-800">
+                    <div class="flex items-center mb-6">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" 
+                             alt="Client" 
+                             class="w-14 h-14 rounded-full border-2 border-primary object-cover">
+                        <div class="ml-4">
+                            <h4 class="font-bold">Sophia Williams</h4>
+                            <p class="text-gray-400 text-sm">London, UK</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 mb-6">
+                        "I needed to sell my collection quickly and discreetly. EXOTIC MOTORS handled everything professionally and achieved better prices than I expected. They're my go-to for all high-value automotive transactions now."
+                    </p>
+                    <div class="text-primary">
+                        <i class="fas fa-quote-right text-3xl opacity-20"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-dark p-8 rounded-xl border border-gray-800">
+                    <div class="flex items-center mb-6">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" 
+                             alt="Client" 
+                             class="w-14 h-14 rounded-full border-2 border-primary object-cover">
+                        <div class="ml-4">
+                            <h4 class="font-bold">Lucas Silva</h4>
+                            <p class="text-gray-400 text-sm">São Paulo, Brazil</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="text-gray-300 mb-6">
+                        "The Bugatti Chiron I purchased through EXOTIC MOTORS arrived exactly as described, with all documentation perfectly handled. Their global shipping and import service made what could have been complicated incredibly simple."
+                    </p>
+                    <div class="text-primary">
+                        <i class="fas fa-quote-right text-3xl opacity-20"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-4 bg-dark section-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6 glow">GET IN <span class="text-primary">TOUCH</span></h2>
+                    <p class="text-gray-400 mb-8 max-w-lg">
+                        Whether you're looking to acquire your dream car or sell your current vehicle, our team of luxury specialists is ready to assist you with a completely discreet and bespoke service.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-primary bg-opacity-20 p-3 rounded-lg mr-4">
+                                <i class="fas fa-map-marker-alt text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Visit Us</h4>
+                                <p class="text-gray-400">Dubai International Financial Centre, Emirates Financial Towers, Dubai, UAE</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-primary bg-opacity-20 p-3 rounded-lg mr-4">
+                                <i class="fas fa-phone-alt text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Call Us</h4>
+                                <p class="text-gray-400">+971 4 123 4567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-primary bg-opacity-20 p-3 rounded-lg mr-4">
+                                <i class="fas fa-envelope text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Email Us</h4>
+                                <p class="text-gray-400">contact@exoticmotors.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10">
+                        <h4 class="font-bold mb-4">FOLLOW US</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 border border-gray-700 hover:border-primary rounded-full flex items-center justify-center text-gray-400 hover:text-primary transition-colors duration-300">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 border border-gray-700 hover:border-primary rounded-full flex items-center justify-center text-gray-400 hover:text-primary transition-colors duration-300">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 border border-gray-700 hover:border-primary rounded-full flex items-center justify-center text-gray-400 hover:text-primary transition-colors duration-300">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 border border-gray-700 hover:border-primary rounded-full flex items-center justify-center text-gray-400 hover:text-primary transition-colors duration-300">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-dark-light p-8 rounded-xl border border-gray-800">
+                    <h3 class="text-2xl font-bold mb-6">Send Us A Message</h3>
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-gray-400 mb-2">Full Name</label>
+                            <input type="text" id="name" name="name" class="w-full bg-dark border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary input-effect" required>
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-gray-400 mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" class="w-full bg-dark border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary input-effect" required>
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-gray-400 mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="w-full bg-dark border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary input-effect" required>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-gray-400 mb-2">Your Message</label>
+                            <textarea id="message" name="message" rows="4" class="w-full bg-dark border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary input-effect" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-primary hover:bg-purple-700 text-white py-4 rounded-lg font-medium transition-colors duration-300">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-12 px-4 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <span class="text-primary font-bold text-2xl">EXOTIC</span>
+                        <span class="text-white font-light text-2xl">MOTORS</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        The world's leading luxury and performance automotive specialists. Redefining automotive excellence.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">Home</a></li>
+                        <li><a href="#featured" class="text-gray-400 hover:text-primary transition-colors duration-300">Inventory</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-primary transition-colors duration-300">Services</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-primary transition-colors duration-300">Testimonials</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-primary transition-colors duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Top Brands</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">Ferrari</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">Lamborghini</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">Rolls-Royce</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">Bugatti</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">Porsche</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Legal</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">Cookies Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">Shipping Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-center md:text-left mb-4 md:mb-0">
+                    © 2023 EXOTIC MOTORS. All rights reserved.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">
+                        <i class="fab fa-cc-visa"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">
+                        <i class="fab fa-cc-mastercard"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">
+                        <i class="fab fa-cc-amex"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">
+                        <i class="fab fa-cc-paypal"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

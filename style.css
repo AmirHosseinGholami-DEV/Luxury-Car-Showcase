@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0e0e0e;
+            color: white;
+            overflow-x: hidden;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(14,14,14,0.9) 0%, rgba(168,85,247,0.2) 100%);
+        }
+        
+        .glow {
+            text-shadow: 0 0 10px rgba(168,85,247,0.7);
+        }
+        
+        .car-card:hover .car-image {
+            transform: scale(1.05);
+        }
+        
+        .testimonial-card {
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(168,85,247,0.3), 0 10px 10px -5px rgba(168,85,247,0.1);
+        }
+        
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #0e0e0e;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #a855f7;
+            border-radius: 4px;
+        }
+        
+        /* Input focus effects */
+        .input-effect:focus {
+            box-shadow: 0 0 0 3px rgba(168,85,247,0.3);
+            border-color: #a855f7;
+        }
+        
+        /* Car highlight animation */
+        @keyframes highlight {
+            0% { box-shadow: 0 0 5px rgba(168,85,247,0.3); }
+            50% { box-shadow: 0 0 20px rgba(168,85,247,0.7); }
+            100% { box-shadow: 0 0 5px rgba(168,85,247,0.3); }
+        }
+        
+        .highlight-animate {
+            animation: highlight 4s ease-in-out infinite;
+        }
+        
+        /* Hero car floating animation */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .float-animate {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        /* Section fade-in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in-section {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        
+        /* For intersection observer to trigger animations */
+        .section-hidden {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 1s;
+        }
+        
+        .section-show {
+            opacity: 1;
+            transform: translateY(0);
+        }
